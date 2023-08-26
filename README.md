@@ -1,1 +1,1 @@
-## Sentiment Analysis of Financial New Headlines using Deep Learning.
+## Sentiment Analysis of Financial News Headlines using Deep Learning.

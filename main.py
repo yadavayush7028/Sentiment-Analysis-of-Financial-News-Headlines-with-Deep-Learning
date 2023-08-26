@@ -37,93 +37,93 @@ for rem_sw in [False, True]:
 
         X, y = tokenizer(data)
 
-        # Feed Forward Neural Network
+        # # Feed Forward Neural Network
 
-        # ffnn_mdl, ffnn_hist, ffnn_acc, ffnn_f1 = FFNN_model(vocab_size=max_feats,
-        #                                                     X = X,
-        #                                                     y = y,
-        #                                                     embed_dim = 256,
-        #                                                     num_epochs = 20,
-        #                                                     batch_size = 10)
+        ffnn_mdl, ffnn_hist, ffnn_acc, ffnn_f1 = FFNN_model(vocab_size=max_feats,
+                                                            X = X,
+                                                            y = y,
+                                                            embed_dim = 256,
+                                                            num_epochs = 20,
+                                                            batch_size = 10)
 
-        # if rem_sw == False:
-        #     RESULTS['Stop Words'].append('Not Removed')
-        # else:
-        #     RESULTS['Stop Words'].append('Removed')
+        if rem_sw == False:
+            RESULTS['Stop Words'].append('Not Removed')
+        else:
+            RESULTS['Stop Words'].append('Removed')
         
-        # if pprcs == tknzr:
-        #     RESULTS['Pre-processing'].append('None')
-        # elif pprcs == lmtzr:
-        #     RESULTS['Pre-processing'].append('Lemmatizing')
-        # else:
-        #     RESULTS['Pre-processing'].append('Stemming')
+        if pprcs == tknzr:
+            RESULTS['Pre-processing'].append('None')
+        elif pprcs == lmtzr:
+            RESULTS['Pre-processing'].append('Lemmatizing')
+        else:
+            RESULTS['Pre-processing'].append('Stemming')
 
-        # RESULTS['Model'].append('FeedFwdNN')
-        # RESULTS['Macro-F1'].append(ffnn_f1)
-        # RESULTS['Accuracy'].append(ffnn_acc)
+        RESULTS['Model'].append('FeedFwdNN')
+        RESULTS['Macro-F1'].append(ffnn_f1)
+        RESULTS['Accuracy'].append(ffnn_acc)
 
-        # ffnn_hist.to_csv(f'Model_history/ffnn_{pprcs.__name__}_{str(int(rem_sw))}.csv', index=False)
-        # ffnn_mdl.save(f'Model_chkpts/ffnn_{pprcs.__name__}_{str(int(rem_sw))}.h5')
+        ffnn_hist.to_csv(f'Model_history/ffnn_{pprcs.__name__}_{str(int(rem_sw))}.csv', index=False)
+        ffnn_mdl.save(f'Model_chkpts/ffnn_{pprcs.__name__}_{str(int(rem_sw))}.h5')
 
         # # Recurrent Neural Network
 
-        # rnn_mdl, rnn_hist, rnn_acc, rnn_f1 = RNN_model(vocab_size = max_feats,
-        #                                                 X = X,
-        #                                                 y = y,
-        #                                                 embed_dim=256,
-        #                                                 out_dim=128,
-        #                                                 num_epochs=20,
-        #                                                 batch_size=10)
+        rnn_mdl, rnn_hist, rnn_acc, rnn_f1 = RNN_model(vocab_size = max_feats,
+                                                        X = X,
+                                                        y = y,
+                                                        embed_dim=256,
+                                                        out_dim=128,
+                                                        num_epochs=20,
+                                                        batch_size=10)
         
-        # if rem_sw == False:
-        #     RESULTS['Stop Words'].append('Not Removed')
-        # else:
-        #     RESULTS['Stop Words'].append('Removed')
+        if rem_sw == False:
+            RESULTS['Stop Words'].append('Not Removed')
+        else:
+            RESULTS['Stop Words'].append('Removed')
         
-        # if pprcs == tknzr:
-        #     RESULTS['Pre-processing'].append('None')
-        # elif pprcs == lmtzr:
-        #     RESULTS['Pre-processing'].append('Lemmatizing')
-        # else:
-        #     RESULTS['Pre-processing'].append('Stemming')
+        if pprcs == tknzr:
+            RESULTS['Pre-processing'].append('None')
+        elif pprcs == lmtzr:
+            RESULTS['Pre-processing'].append('Lemmatizing')
+        else:
+            RESULTS['Pre-processing'].append('Stemming')
 
-        # RESULTS['Model'].append('RNN')
-        # RESULTS['Macro-F1'].append(rnn_f1)
-        # RESULTS['Accuracy'].append(rnn_acc)
+        RESULTS['Model'].append('RNN')
+        RESULTS['Macro-F1'].append(rnn_f1)
+        RESULTS['Accuracy'].append(rnn_acc)
 
-        # rnn_hist.to_csv(f'Model_history/rnn_{pprcs.__name__}_{str(int(rem_sw))}.csv', index=False)
-        # rnn_mdl.save(f'Model_chkpts/rnn_{pprcs.__name__}_{str(int(rem_sw))}.h5')
+        rnn_hist.to_csv(f'Model_history/rnn_{pprcs.__name__}_{str(int(rem_sw))}.csv', index=False)
+        rnn_mdl.save(f'Model_chkpts/rnn_{pprcs.__name__}_{str(int(rem_sw))}.h5')
 
         # # Long Short-Term Memory
 
-        # lstm_mdl, lstm_hist, lstm_acc, lstm_f1 = LSTM_model(vocab_size = max_feats,
-        #                                                     X = X,
-        #                                                     y = y,
-        #                                                     embed_dim = 256,
-        #                                                     out_dim = 128,
-        #                                                     num_epochs = 20,
-        #                                                     batch_size = 10)
+        lstm_mdl, lstm_hist, lstm_acc, lstm_f1 = LSTM_model(vocab_size = max_feats,
+                                                            X = X,
+                                                            y = y,
+                                                            embed_dim = 256,
+                                                            out_dim = 128,
+                                                            num_epochs = 20,
+                                                            batch_size = 10)
 
-        # if rem_sw == False:
-        #     RESULTS['Stop Words'].append('Not Removed')
-        # else:
-        #     RESULTS['Stop Words'].append('Removed')
+        if rem_sw == False:
+            RESULTS['Stop Words'].append('Not Removed')
+        else:
+            RESULTS['Stop Words'].append('Removed')
         
-        # if pprcs == tknzr:
-        #     RESULTS['Pre-processing'].append('None')
-        # elif pprcs == lmtzr:
-        #     RESULTS['Pre-processing'].append('Lemmatizing')
-        # else:
-        #     RESULTS['Pre-processing'].append('Stemming')
+        if pprcs == tknzr:
+            RESULTS['Pre-processing'].append('None')
+        elif pprcs == lmtzr:
+            RESULTS['Pre-processing'].append('Lemmatizing')
+        else:
+            RESULTS['Pre-processing'].append('Stemming')
 
-        # RESULTS['Model'].append('LSTM')
-        # RESULTS['Macro-F1'].append(lstm_f1)
-        # RESULTS['Accuracy'].append(lstm_acc)
+        RESULTS['Model'].append('LSTM')
+        RESULTS['Macro-F1'].append(lstm_f1)
+        RESULTS['Accuracy'].append(lstm_acc)
 
-        # lstm_hist.to_csv(f'Model_history/lstm_{pprcs.__name__}_{str(int(rem_sw))}.csv', index=False)
-        # lstm_mdl.save(f'Model_chkpts/lstm_{pprcs.__name__}_{str(int(rem_sw))}.h5')
+        lstm_hist.to_csv(f'Model_history/lstm_{pprcs.__name__}_{str(int(rem_sw))}.csv', index=False)
+        lstm_mdl.save(f'Model_chkpts/lstm_{pprcs.__name__}_{str(int(rem_sw))}.h5')
 
-        # Transformer
+        # # Transformer
 
         trfmr_mdl, trfmr_hist, trfmr_acc, trfmr_f1 = TRFMR_model(vocab_size = max_feats,
                                                                 X = X,
